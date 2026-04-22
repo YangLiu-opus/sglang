@@ -170,9 +170,9 @@ def test_correctness_and_compilation():
     print(f"    runtime   T : {new_r:>3}  (cache {cache_r0} -> {cache_r1})")
     print()
 
-    assert new_c >= len(t_values), (
-        f"constexpr should compile >= {len(t_values)} times, got {new_c}"
-    )
+    assert new_c >= len(
+        t_values
+    ), f"constexpr should compile >= {len(t_values)} times, got {new_c}"
     assert new_r == 0, f"runtime should compile 0 times, got {new_r}"
     print("  Part 1 & 2 PASSED.")
     print()
